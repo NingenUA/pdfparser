@@ -1,0 +1,225 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2014.02.04 17:42:05 =~=~=~=~=~=~=~=~=~=~=~=
+
+
+Welcome !
+ZTE Corporation.
+All rights reserved.
+
+
+login:admin
+password:**
+  %  Local login-authentication failure!
+
+login:admin
+password:****
+  %  Local login-authentication success!
+
+z
+  %  Remote server closed because idle timeout
+de was refused!
+
+zte>en
+password:****
+zte(cfg)#config snmp
+zte(cfg-snmp)#
+zte(cfg-snmp)#create community o76E3UkX private
+zte(cfg-snmp)#set community o76E3UkX view zteView
+zte(cfg-snmp)#ex
+zte(cfg)#set user local admin login-password OhZb96M7
+zte(cfg)#set user local admin admin-password OhZb96M7
+zte(cfg)#sh
+zte(cfg)#show por
+zte(cfg)#show port 52
+  PortId     : 52              MediaType : 1000BaseX
+  PortParams:
+    PortEnable     : enabled 
+    Duplex         : auto          Speed          : auto
+    DefaultVlanId  : 1             FlowControl    : disabled
+    Multicastfilter: disabled      Security       : disabled
+    SpeedAdvertise : MaxSpeed      Mdix           : auto
+    PortMacLimit   : disabled      UnknownFilter  : disabled
+    MacLearning    : enabled       Accept-Frame   : all-frame
+    FixMac         : disabled      FixMode        : none
+    RecoverTime    : none
+    PortVlanJump   : disabled     
+  PortStatus:
+    PortClass      : 802.3         Link           : up
+    Duplex         : full          Speed          : 1Gbps
+  Optical Module Status:    
+    OpticalModuleInSlot : YES 
+    Fiber transceiver information : 
+    VendorName    :OEM             
+    Compliance    :1000BASE-LX
+    VendorNumber  :FTRJ1319P1BTL-C7-A   
+    SFP Mode      :Singlemode
+    SFP Wave-Length       : 1310 nm
+    Transmission distance : 10000 m
+----- more ----- Press Q or Ctrl+C to break -----                                                 zte(cfg)#set port 52 de
+default-priority  description  
+
+zte(cfg)#set port 52 des
+zte(cfg)#set port 52 description 
+<string>           
+
+zte(cfg)#set port 52 description 
+<string>           
+
+zte(cfg)#set port 52 description dl  ul|jujom_+7  7|m4
+zte(cfg)#set   sh
+zte(cfg)#show por
+zte(cfg)#show port 49
+  PortId     : 49              MediaType : 1000BaseT
+  PortParams:
+    PortEnable     : enabled 
+    Duplex         : auto          Speed          : auto
+    DefaultVlanId  : 1             FlowControl    : disabled
+    Multicastfilter: disabled      Security       : disabled
+    SpeedAdvertise : MaxSpeed      Mdix           : auto
+    PortMacLimit   : disabled      UnknownFilter  : disabled
+    MacLearning    : enabled       Accept-Frame   : all-frame
+    FixMac         : disabled      FixMode        : none
+    RecoverTime    : none
+    PortVlanJump   : disabled     
+  PortStatus:
+    PortClass      : 802.3         Link           : up
+    Duplex         : full          Speed          : 1Gbps
+
+zte(cfg)#qse   set dh
+zte(cfg)#set dhcp por
+zte(cfg)#set dhcp port 49 ca
+zte(cfg)#set dhcp port 49 cascade 
+zte(cfg)#set por
+zte(cfg)#set port 49 
+enable             disable            speedadvertise     duplex             
+speed              pvid               vlan-mode          mdix               
+user-priority      dscp-priority      default-priority   remapping-tag      
+flowcontrol        security           unit-statistics    multicast-filter   
+description        sqinq-session      macaddress         mac-learning       
+vlan-attribute     acl                vlanjump           accept-frame       
+1min-peak          
+
+zte(cfg)#set port 49 de
+default-priority  description  
+
+zte(cfg)#set port 49 de
+default-priority  description  
+
+zte(cfg)#set port 49 des
+zte(cfg)#set port 49 description 
+<string>           
+
+zte(cfg)#set port 49 description 
+<string>           
+
+zte(cfg)#set port 49 description dl| :kaz_5:p5:m2
+zte(cfg)#s con nas
+zte(cfg-nas)#set ipp
+  %  Command not found (0x40000066)
+
+zte(cfg-nas)#set ipp   
+  %  Command not found (0x40000066)
+
+zte(cfg-nas)#set     ipt
+zte(cfg-nas)#iptv p 
+cac-rule           channel            control            sms-server         
+sms-server-port    package            prv                view-profile       
+cdr                port               
+
+zte(cfg-nas)#iptv ser
+  %  Command not found (0x40000066)
+
+zte(cfg-nas)#iptv ser   por
+zte(cfg-nas)#iptv port 49 se
+zte(cfg-nas)#iptv port 49 service s
+zte(cfg-nas)#iptv port 49 service start 
+zte(cfg-nas)#ipt
+zte(cfg-nas)#iptv pa or
+zte(cfg-nas)#iptv port 3 49 pa
+zte(cfg-nas)#iptv port 49 package 
+id-list            name               
+
+zte(cfg-nas)#iptv port 49 package id
+zte(cfg-nas)#iptv port 49 package id-list 
+<package-list>     
+
+zte(cfg-nas)#iptv port 49 package id-list 0
+zte(cfg-nas)#sa
+  %  Command not found (0x40000066)
+
+zte(cfg-nas)#sa  
+zte(cfg)#sa
+zte(cfg)#saveconfig 
+  Saving file, please wait a minute...
+done !
+
+zte(cfg)#
+  %  Remote server closed because idle timeout
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2014.02.06 09:10:27 =~=~=~=~=~=~=~=~=~=~=~=
+
+
+Welcome !
+ZTE Corporation.
+All rights reserved.
+
+
+login:admin
+password:********
+  %  Local login-authentication success!
+
+sh289_p4>ena
+password:********
+sh289_p4(cfg)#sh
+sh289_p4(cfg)#show por
+sh289_p4(cfg)#show port 
+  PortId     : 1               MediaType : 100BaseT
+  Description: cl:sh289k53_1
+  PortParams:
+    PortEnable     : enabled 
+    Duplex         : auto          Speed          : auto
+    DefaultVlanId  : 1             FlowControl    : disabled
+    Multicastfilter: disabled      Security       : disabled
+    SpeedAdvertise : MaxSpeed      Mdix           : auto
+    PortMacLimit   : 1             UnknownFilter  : disabled
+    MacLearning    : enabled       Accept-Frame   : all-frame
+    PortVlanJump   : disabled     
+    FixMac         : disabled      FixMode        : none
+    RecoverTime    : none
+  PortStatus:
+    PortClass      : 802.3         Link           : down
+    Duplex         : half          Speed          : 10Mbps
+
+  PortId     : 2               MediaType : 100BaseT
+  Description: cl:sh289k55
+  PortParams:
+    PortEnable     : enabled 
+    Duplex         : auto          Speed          : auto
+    DefaultVlanId  : 1             FlowControl    : disabled
+    Multicastfilter: disabled      Security       : disabled
+----- more ----- Press Q or Ctrl+C to break -----                                                 sh289_p4(cfg)#sh
+sh289_p4(cfg)#show vlan
+  VlanType: 802.1q vlan
+
+  VlanId  : 1     VlanStatus: enabled
+  VlanName: 
+  VlanMode: Static
+  Tagged ports    : 
+  Untagged ports  : 1-28
+  Forbidden ports : 
+
+  VlanId  : 22    VlanStatus: enabled
+  VlanName: root
+  VlanMode: Static
+  Tagged ports    : 25-28
+  Untagged ports  : 
+  Forbidden ports : 
+
+  VlanId  : 738   VlanStatus: enabled
+  VlanName: root_738
+  VlanMode: Static
+  Tagged ports    : 25-28
+  Untagged ports  : 
+  Forbidden ports : 
+
+  Total Vlans: 3
+----- more ----- Press Q or Ctrl+C to break -----                                                 
+sh289_p4(cfg)#

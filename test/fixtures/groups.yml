@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: MyString
+  bill: MyString
+  user: MyString
+  servpp: MyString
+  ala: MyString
+  ldarc: MyString
+  dvao: MyString
+  otherf: MyString
+  gst: MyString
+  subtotal: MyString
+  total: MyString
+
+two:
+  client: MyString
+  bill: MyString
+  user: MyString
+  servpp: MyString
+  ala: MyString
+  ldarc: MyString
+  dvao: MyString
+  otherf: MyString
+  gst: MyString
+  subtotal: MyString
+  total: MyString

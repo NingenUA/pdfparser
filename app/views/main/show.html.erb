@@ -1,0 +1,194 @@
+<%= link_to 'Назад', {:action => 'index'} %>
+
+<table>
+  <tr>
+    <th>Client Number</th>
+
+    <th>CLient Name</th>
+
+    <th>
+      <table>
+        <tr>
+          <td>Total Month's</td>
+        </tr>
+        <tr>
+          <td>Saving</td>
+        </tr>
+      </table>
+    </th>
+    <th>Total</th>
+    <th>
+      <table>
+        <tr>
+          <td>Service</td>
+        </tr>
+        <tr>
+          <td>Plan name</td>
+        </tr>
+      </table>
+     </th>
+    <th>
+      <table>
+        <tr>
+          <td>Additional</td>
+        </tr>
+        <tr>
+          <td>Local</td>
+        </tr>
+        <tr>
+          <td>Airtime</td>
+        </tr>
+      </table>
+    </th>
+    <th>
+      <table>
+        <tr>
+          <td>Long Distance</td>
+        </tr>
+        <tr>
+          <td>Charges</td>
+        </tr>
+      </table>
+    </th>
+    <th>
+      <table>
+        <tr>
+          <td>Data and Other</td>
+        </tr>
+        <tr>
+          <td>Services</td>
+        </tr>
+      </table>
+    </th>
+    <th>
+      <table>
+        <tr>
+          <td>Value Added</td>
+        </tr>
+        <tr>
+          <td>Services</td>
+        </tr>
+      </table>
+    </th>
+
+
+      <br>
+<br>
+<% @individuals.each do |ind|%>
+    <tr>
+      <td><%= ind.client_number %></td>
+      <td><%= ind.client_name %></td>
+      <td><%= ind.tms %></td>
+      <td><%= ind.total %></td>
+      <td><%= ind.spn %></td>
+      <td><%= ind.ala %></td>
+      <td><%= ind.ldc %></td>
+      <td><%= ind.daos %></td>
+      <td><%= ind.vas %></td>
+
+    </tr>
+<% end %>
+</table>
+
+<table>
+
+  <tr>
+    <th>User</th>
+
+    <th>
+      <table>
+      <tr>
+        <td>Service</td>
+      </tr>
+      <tr>
+        <td>Plan Price</td>
+      </tr>
+      </table>
+    </th>
+    <th>
+      <table>
+        <tr>
+          <td>Additional</td>
+        </tr>
+        <tr>
+          <td>Local</td>
+        </tr>
+        <tr>
+          <td>Airtime</td>
+        </tr>
+      </table>
+    </th>
+    <th>
+      <table>
+        <tr>
+          <td>LD and</td>
+        </tr>
+        <tr>
+          <td>Roaming</td>
+        </tr>
+        <tr>
+          <td>charges</td>
+        </tr>
+      </table>
+
+    </th>
+    <th>
+      <table>
+        <tr>
+          <td>Data,</td>
+        </tr>
+        <tr>
+          <td>Voice and</td>
+        </tr>
+        <tr>
+          <td>Others</td>
+        </tr>
+        <tr>
+          <td>Service</td>
+        </tr>
+      </table>
+
+    </th>
+    <th>
+      <table>
+        <tr>
+          <td>Other</td>
+        </tr>
+        <tr>
+          <td>Fees</td>
+        </tr>
+      </table>
+
+    </th>
+    <th>
+      GST
+    </th>
+
+    <th>
+      Subtotal
+    </th>
+    <th>
+      Total
+    </th>
+
+  </tr>
+
+  <br>
+  <br>
+  <% @groups.each do |group|%>
+      <tr>
+        <td><%= group.user %></td>
+
+        <td><%= group.servpp %></td>
+        <td><%= group.ala %></td>
+        <td><%= group.ldarc %></td>
+        <td><%= group.dvao %></td>
+        <td><%= group.otherf %></td>
+        <td><%= group.gst %></td>
+        <td><%= group.subtotal %></td>
+        <td><%= group.total %></td>
+      </tr>
+  <% end %>
+</table>
+
+
