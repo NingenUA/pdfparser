@@ -33,16 +33,12 @@ $(document).ready(function() {
              if (/.main.show/.test(location.pathname)){
                  location.reload();
              }
-             else if (/.main$/.test(location.pathname)){
-                 if(/.main.show/.test(location.pathname)){
-                     location.reload();
-                 }
                  else if (/.main$/.test(location.pathname)){
                      if($('#proc').length==0){
                         $("#Book").find("td:last").after('<div id="proc">Обработка  <img src="/assets/ajax-loader.gif" width="18" height="18" alt="Edit Entry" /></div>');
                      }
                  }
-             }
+             
          }
 
 
