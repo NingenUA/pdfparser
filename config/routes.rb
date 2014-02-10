@@ -3,6 +3,7 @@ Pdfparser::Application.routes.draw do
   get 'main/show'
 
   get 'stream'=> 'main#stream', :as => 'stream'
+  root 'main#index'
 
 #  post "main/uploadFile"
 
