@@ -19,60 +19,35 @@ class PdfParserWorker
       group.save
     end
   end
+ def page_text_scan(page,txt,i)
+    pscan = page.text.scan(/.Total.+[\d]{1,3}.[\d]{2}/)
+    if page.text.scan(txt).empty?
+      return ""
+    else
+      @i+=i
+      return pscan[@i].split("$ ")[1].to_s
+
+
+    end
+  end
 
   def individual_detail(page)
     client_number = page.text.scan(/.[\d]{3}-[\d]{3}-[\d]{4}/)[0].to_s
     client_name = page.text.scan(/\w{3,}\s\w{3,}$/)[0].to_s
     pscan = page.text.scan(/.Total.+[\d]{1,3}.[\d]{2}/)
-    i = 0
+
+    @i = -1
 
 
-    unless page.text.scan("Total Month's Savings").empty?
 
-      itms = pscan[i].split("$ ")[1].to_s
-      i+=1
-    else
-      itms = ""
-    end
-    unless page.text.scan("Service Plan Name").empty?
-      ispn = pscan[i].split("$ ")[1].to_s
-      i+=1
-    else
-      ispn = ""
-    end
-    unless page.text.scan("Additional Local Airtime").empty?
-      iala = pscan[i].split("$ ")[1].to_s
-      i+=1
-    else
-      iala = ""
-    end
-    unless page.text.scan("Long Distance Charges").empty?
-      ildc = pscan[i].split("$ ")[1].to_s
-      i+=1
-    else
-      ildc = ""
-    end
-    unless page.text.scan("Data and Other Serv").empty?
-      idaos = pscan[i].split("$ ")[1].to_s
-      i+=1
-    else
-      idaos = ""
-    end
-    unless page.text.scan("Value Added Service").empty?
-      ivas = pscan[i].split("$ ")[1].to_s
-      i+=1
-    else
-      ivas = ""
-    end
-    unless page.text.scan("Total Current ").empty?
-      i+=1
-      itotal = pscan[i].split("$ ")[1].to_s
-    else
-      itotal = ""
-    end
     individ=Individual.new(:client_number => client_number, :client_name => client_name ,
-                           :tms =>itms, :spn => ispn, :ala => iala, :ldc => ildc,
-                           :daos => idaos,:vas => ivas,:total => itotal,
+                           :tms => page_text_scan(page,"Total Month's Savings",1),
+                           :spn =>page_text_scan(page,"Service Plan Name",1) ,
+                           :ala => page_text_scan(page,"Additional Local Airtime",1),
+                           :ldc => page_text_scan(page,"Long Distance Charges",1),
+                           :daos => page_text_scan(page,"Data and Other Serv",1),
+                           :vas => page_text_scan(page,"Value Added Service",1),
+                           :total => page_text_scan(page,"Total Current",2),
                            :book_id => @id )
     individ.save
   end
