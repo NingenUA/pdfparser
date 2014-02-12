@@ -16,7 +16,6 @@ class PdfParserWorker
                        :gst => ts[12].to_s,:subtotal=> ts[11].to_s,
                        :total => ts[13].to_s , :book_id => @id )
       group.save
-      group.save
     end
   end
  def page_text_scan(page,txt,i=1)
