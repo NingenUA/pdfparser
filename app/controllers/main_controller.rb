@@ -8,20 +8,20 @@ class MainController < ApplicationController
 
       render stream: true
   end
-
-  def create
-    unless (params[:datafile].nil?)
-    uploaded_io = params[:datafile]
-
+  
+  def save_file(input_file)
+    uploaded_io = input_file
     file = Rails.root.join('public', 'data', uploaded_io.original_filename)
     File.open(file, 'wb') do |file|
       file.write(uploaded_io.read)
-    end
-    PdfParserWorker.perform_async("public/data/#{uploaded_io.original_filename}")
-    else
-      logger.info "нету файла"
+      uploaded_io.original_filename
     end
   end
+
+  def create
+    PdfParserWorker.perform_async("public/data/#{save_file(params[:datafile])}")
+  end
+  
   def show
       @individuals = Individual.where(book_id: params[:book_id])
       @groups = Group.where(book_id: params[:book_id])
