@@ -19,7 +19,7 @@ class PdfParserWorker
       group.save
     end
   end
- def page_text_scan(page,txt,i)
+ def page_text_scan(page,txt,i=1)
     pscan = page.text.scan(/.Total.+[\d]{1,3}.[\d]{2}/)
     if page.text.scan(txt).empty?
       return ""
@@ -41,12 +41,12 @@ class PdfParserWorker
 
 
     individ=Individual.new(:client_number => client_number, :client_name => client_name ,
-                           :tms => page_text_scan(page,"Total Month's Savings",1),
-                           :spn =>page_text_scan(page,"Service Plan Name",1) ,
-                           :ala => page_text_scan(page,"Additional Local Airtime",1),
-                           :ldc => page_text_scan(page,"Long Distance Charges",1),
-                           :daos => page_text_scan(page,"Data and Other Serv",1),
-                           :vas => page_text_scan(page,"Value Added Service",1),
+                           :tms => page_text_scan(page,"Total Month's Savings"),
+                           :spn =>page_text_scan(page,"Service Plan Name") ,
+                           :ala => page_text_scan(page,"Additional Local Airtime"),
+                           :ldc => page_text_scan(page,"Long Distance Charges"),
+                           :daos => page_text_scan(page,"Data and Other Serv"),
+                           :vas => page_text_scan(page,"Value Added Service"),
                            :total => page_text_scan(page,"Total Current",2),
                            :book_id => @id )
     individ.save
