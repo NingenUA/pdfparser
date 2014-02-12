@@ -36,7 +36,6 @@ class MainController < ApplicationController
        on.message do |event, data|
         response.stream.write("event: bookcreated\n")
         response.stream.write "data: #{data}\n\n"
-        response.stream.write "\n\n"
       end
     end
 
