@@ -1,10 +1,9 @@
-
 <h1>Добавить новый PDF файлa</h1>
 
 
 <%= form_tag({action: :create}, multipart: true, remote: true, authenticity_token: true)  do  %>
       <%= file_field_tag 'datafile' ,accept: 'application/pdf' %></p>
-    <%= submit_tag 'Обработать!' %>
+    <%= submit_tag 'Обработать!' , :id => "submit", disabled: 'true'%>
 <% end %>
 
 
