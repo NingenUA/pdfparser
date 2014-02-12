@@ -51,17 +51,17 @@ class PdfParserWorker
                            :book_id => @id )
     individ.save
   end
+  
+  def book_elm(doc,elem)
+    doc.page(1).text.scan(elem)[0].split(" : ")[1].to_s
+  end
+  
   def read_pdf(file)
 
     a=0
     doc = PDF::Reader.new(file)
-
-    @client=doc.page(1).text.scan(/.CLIE.+/)[0].split(" : ")[1].to_s
-    bill = doc.page(1).text.scan(/.BILL.+/)[0].split(" : ")[1].to_s
-    book = Book.new(:client_num => @client , :bill_num  => bill)
+    book = Book.new(:client_num => book_elm(doc,/.CLIE.+/) , :bill_num  => book_elm(doc,/.BILL.+/))
     book.save
-
-    @id = book.id
     doc.pages.each do |page|
       unless (page.text.scan(/.G R O U P S U M M A R Y - U S E R T O T .+/).empty?)
          group_summary(page)
