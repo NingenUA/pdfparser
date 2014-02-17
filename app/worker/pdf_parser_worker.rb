@@ -16,9 +16,10 @@ class PdfParserWorker
                        :gst => ts[12].to_s,:subtotal=> ts[11].to_s,
                        :total => ts[13].to_s , :book_id => @id )
       group.save
+      group.save
     end
   end
- def page_text_scan(page,txt,i=1)
+  def page_text_scan(page,txt,i=1)
     pscan = page.text.scan(/.Total.+[\d]{1,3}.[\d]{2}/)
     if page.text.scan(txt).empty?
       return ""
@@ -50,20 +51,21 @@ class PdfParserWorker
                            :book_id => @id )
     individ.save
   end
-  
+
   def book_elm(doc,elem)
     doc.page(1).text.scan(elem)[0].split(" : ")[1].to_s
   end
-  
+
   def read_pdf(file)
 
     a=0
     doc = PDF::Reader.new(file)
     book = Book.new(:client_num => book_elm(doc,/.CLIE.+/) , :bill_num  => book_elm(doc,/.BILL.+/))
     book.save
+    @id = book.id
     doc.pages.each do |page|
       unless (page.text.scan(/.G R O U P S U M M A R Y - U S E R T O T .+/).empty?)
-         group_summary(page)
+        group_summary(page)
       end
       unless (page.text.scan(/I N D I V I D U A L D E T A I L$/).empty?)
         a+=1

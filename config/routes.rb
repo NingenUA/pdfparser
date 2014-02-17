@@ -4,7 +4,6 @@ Pdfparser::Application.routes.draw do
 
   get 'stream'=> 'main#stream', :as => 'stream'
   root 'main#index'
-
 #  post "main/uploadFile"
 
   # The priority is based upon order of creation: first created -> highest priority.

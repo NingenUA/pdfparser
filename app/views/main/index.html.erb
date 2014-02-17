@@ -1,33 +1,50 @@
-<h1>Добавить новый PDF файлa</h1>
+<div class="well">
+  <h1>
+    <center>PDF-Parsing System</center>
+  </h1>
+  <div class="panel-group" id="myAccordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a class="panel-title" data-toggle="collapse" data-parent="#myAccordion" href="#collapseOne" >
+          Add new PDF-file
+        </a>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse ">
+        <div class="panel-body" >
+          <%= form_tag({action: :create }, multipart: true, remote: true, authenticity_token: true)  do  %>
+              <%= file_field_tag 'datafile' ,accept: 'application/pdf' %></p>
+              <%= submit_tag 'To process!' , :id => "submit", disabled: 'true' , :class => "btn btn-success"%>
+          <% end %>
+        </div>
+      </div>
+    </div>
 
-
-<%= form_tag({action: :create}, multipart: true, remote: true, authenticity_token: true)  do  %>
-      <%= file_field_tag 'datafile' ,accept: 'application/pdf' %></p>
-    <%= submit_tag 'Обработать!' , :id => "submit", disabled: 'true'%>
-<% end %>
-
-
-
-
-
-<h2>Уже добавленные</h2>
-<table id="Book">
-  <tr>
+  </div>
+</div>
+<h2>
+  <center>Already processed</center>
+</h2>
+  <%= paginate @books , :left => 1, :right => 3 %>
+<table class="table table-bordered table-striped" id="Book">
+  <thead>
     <th>Client #</th>
     <th>Bill #</th>
     <th>Upload at</th>
     <th></th>
-  </tr>
-
+  </thead>
+  <tbody>
   <% @books.each do |book| %>
-      <tr>
+      <tr class="random">
 
         <td><%= book.client_num %></td>
         <td><%= book.bill_num %></td>
         <td><%= book.created_at %></td>
-        <td><%= link_to 'Подробней', {:action => 'show', :book_id => book.id} %></td>
+        <td><%= link_to 'Details', {:action => 'show', :book_id => book.id} %></td>
 
       </tr>
   <% end %>
-</table>
+  </tbody>
+
+
+
 

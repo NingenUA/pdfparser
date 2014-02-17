@@ -13,35 +13,28 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() {
-
-
-
     var source = new EventSource('/stream');
     source.addEventListener('bookcreated', function(e) {
          if (e.data=="book") {
              if (/.main$/.test(location.pathname)){
                  location.reload();
-
              }
          }
-
-
          else if (e.data=="show") {
-             if (/.main.show/.test(location.pathname)){
-                 location.reload();
-             }
-                 else if (/.main$/.test(location.pathname)){
-                     if($('#proc').length==0){
-                        $("#Book").find("td:last").after('<div id="proc">Обработка  <img src="/assets/ajax-loader.gif" width="18" height="18" alt="Edit Entry" /></div>');
-                     }
-                 }
-             
-         }
+        if (/.main.show/.test(location.pathname)){
+            location.reload();
+        }
+        else if (/.main$/.test(location.pathname)){
+            if($('#proc').length==0){
+                $("#Book").find("tr:eq(1)").append('<div id="proc"><img src="/assets/ajax-loader.gif" width="25" height="25" alt="Edit Entry" /></div>');
+            }
+        }
 
-
+    }
          else if (e.data=="finish") {
              if (/.main$/.test(location.pathname)){
                  location.reload();
@@ -50,4 +43,6 @@ $(document).ready(function() {
          }
     });
 });
+
+
 

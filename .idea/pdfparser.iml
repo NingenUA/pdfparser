@@ -130,6 +130,7 @@
     <orderEntry type="library" scope="PROVIDED" name="afm (v0.2.0, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v4.0.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.14, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.1.1.0, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.5.2, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="celluloid (v0.15.2, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
@@ -145,6 +146,8 @@
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.5.3, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.1.0, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.15.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-bootstrap (v3.0.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v4.7.5, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
@@ -160,6 +163,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.1.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis (v3.0.7, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-namespace (v1.4.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="remotipart (v1.2.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-rc4 (v0.1.5, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.14, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v4.0.1, RVM: ruby-2.0.0-p353 [rubymine_pdfparser]) [gem]" level="application" />

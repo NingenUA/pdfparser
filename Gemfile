@@ -2,10 +2,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+gem "kaminari", "~> 0.15.1"
 #gem 'debugger'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
+#gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'kaminari-bootstrap'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
