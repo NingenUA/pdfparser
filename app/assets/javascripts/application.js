@@ -20,15 +20,15 @@ $(document).ready(function() {
     var source = new EventSource('/stream');
     source.addEventListener('bookcreated', function(e) {
          if (e.data=="book") {
-             if (/.main$/.test(location.pathname)){
+             if (/$/.test(location.pathname)){
                  location.reload();
              }
          }
          else if (e.data=="show") {
-        if (/.main.show/.test(location.pathname)){
+        if (/.bills.show/.test(location.pathname)){
             location.reload();
         }
-        else if (/.main$/.test(location.pathname)){
+        else if (/$/.test(location.pathname)){
             if($('#proc').length==0){
                 $("#Book").find("tr:eq(1)").append('<div id="proc"><img src="/assets/ajax-loader.gif" width="25" height="25" alt="Edit Entry" /></div>');
             }
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     }
          else if (e.data=="finish") {
-             if (/.main$/.test(location.pathname)){
+             if (/$/.test(location.pathname)){
                  location.reload();
                  $("#proc").remove();
              }

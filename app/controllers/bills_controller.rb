@@ -1,4 +1,4 @@
-class MainController < ApplicationController
+class BillsController < ApplicationController
   include ActionController::Live
   include FileModule
   respond_to :json, only: [:repaired]

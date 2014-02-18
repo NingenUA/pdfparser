@@ -1,10 +1,10 @@
 Pdfparser::Application.routes.draw do
-  resources :main
-  get 'main/show'
 
-  get 'stream'=> 'main#stream', :as => 'stream'
-  root 'main#index'
-#  post "main/uploadFile"
+  get 'bills/show'
+  post 'bills/create'
+  get 'stream'=> 'bills#stream', :as => 'stream'
+  root 'bills#index'
+#  post "bills/uploadFile"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
